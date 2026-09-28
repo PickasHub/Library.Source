@@ -83,13 +83,9 @@ local function ApplyTheme(color)
         }),
 
         Outline = color,
-
         Text = TextColor,
-
         Placeholder = MutedColor,
-
         Button = ButtonColor,
-
         Icon = color,
     })
 
@@ -113,7 +109,6 @@ local Window = WindUI:CreateWindow({
 
     OpenButton = {
         Title = "PICKA'S HUB",
-
         Icon = "rbxassetid://97703901466521",
 
         CornerRadius = UDim.new(1, 0),
@@ -152,6 +147,64 @@ local Window = WindUI:CreateWindow({
 
 -- Force purple again after Window creation
 ApplyTheme(DefaultPurple)
+
+--==================================================
+-- COMMUNITY POPUP
+--==================================================
+
+task.defer(function()
+    task.wait(0.15)
+
+    pcall(function()
+        WindUI:Popup({
+            Title = "Wanna join community",
+
+            Content = "Join the official PICKA'S HUB community for updates, announcements, support, and more.",
+
+            Buttons = {
+                {
+                    Title = "Yes",
+
+                    Icon = "check",
+
+                    Variant = "Primary",
+
+                    Callback = function()
+                        local Invite =
+                            "https://discord.gg/BJRkszT8rM"
+
+                        pcall(function()
+                            if setclipboard then
+                                setclipboard(Invite)
+                            end
+                        end)
+
+                        WindUI:Notify({
+                            Title = "PICKA'S HUB",
+
+                            Content = "Community invite copied.",
+
+                            Icon = "check",
+
+                            Duration = 3,
+                        })
+                    end,
+                },
+
+                {
+                    Title = "No",
+
+                    Icon = "x",
+
+                    Variant = "Tertiary",
+
+                    Callback = function()
+                    end,
+                },
+            },
+        })
+    end)
+end)
 
 -- Version Tag
 Window:Tag({
@@ -341,6 +394,7 @@ SettingsTab:Colorpicker({
             Window:EditOpenButton({
                 Color = ColorSequence.new(
                     color,
+
                     color:Lerp(
                         Color3.new(0, 0, 0),
                         0.35
@@ -363,7 +417,9 @@ SettingsTab:Slider({
 
     Value = {
         Min = 0.20,
+
         Max = 0.50,
+
         Default = 0.34,
     },
 
@@ -455,7 +511,8 @@ SettingsTab:Button({
         local success = false
 
         pcall(function()
-            success = Window.CurrentConfig:Save()
+            success =
+                Window.CurrentConfig:Save()
         end)
 
         if success then
@@ -517,7 +574,8 @@ SettingsTab:Button({
         local success = false
 
         pcall(function()
-            success = Window.CurrentConfig:Load()
+            success =
+                Window.CurrentConfig:Load()
         end)
 
         if success then
@@ -669,7 +727,9 @@ task.spawn(function()
             )
 
         local hours =
-            math.floor(elapsed / 3600)
+            math.floor(
+                elapsed / 3600
+            )
 
         local minutes =
             math.floor(
