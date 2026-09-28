@@ -1,0 +1,197 @@
+-- Load PICKA'S HUB Library
+
+local library = loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/PickasHub/Library.Source/refs/heads/main/PSHLibrary.lua"
+))()
+
+-- Main Tab
+local Main = library:AddTab({
+    Title = "Main",
+    Icon = "home",
+})
+
+Main:AddSection({
+    Title = "Main Features",
+})
+
+Main:AddToggle({
+    Title = "Example Toggle",
+    Flag = "ExampleToggle",
+    Default = false,
+
+    Callback = function(value)
+        print("Example Toggle:", value)
+    end,
+})
+
+Main:AddButton({
+    Title = "Example Button",
+    Icon = "mouse-pointer",
+    Flag = "ExampleButton",
+
+    Callback = function()
+        library:Notify({
+            Title = "PICKA'S HUB",
+            Content = "Button clicked!",
+            Icon = "check",
+            Duration = 3,
+        })
+    end,
+})
+
+Main:AddSlider({
+    Title = "Example Slider",
+    Flag = "ExampleSlider",
+
+    Min = 0,
+    Max = 100,
+    Default = 50,
+    Step = 1,
+
+    Callback = function(value)
+        print("Slider:", value)
+    end,
+})
+
+Main:AddDropdown({
+    Title = "Example Dropdown",
+    Flag = "ExampleDropdown",
+
+    Values = {
+        "Option 1",
+        "Option 2",
+        "Option 3",
+    },
+
+    Default = "Option 1",
+
+    Callback = function(value)
+        print("Dropdown:", value)
+    end,
+})
+
+Main:AddMultiDropdown({
+    Title = "Example Multi Dropdown",
+    Flag = "ExampleMultiDropdown",
+
+    Values = {
+        "Option 1",
+        "Option 2",
+        "Option 3",
+    },
+
+    Default = {},
+
+    Callback = function(value)
+        print("Multi Dropdown:", value)
+    end,
+})
+
+Main:AddInput({
+    Title = "Example Input",
+    Flag = "ExampleInput",
+
+    Placeholder = "Type something...",
+
+    Callback = function(value)
+        print("Input:", value)
+    end,
+})
+
+Main:AddColorPicker({
+    Title = "Example Color",
+    Flag = "ExampleColor",
+
+    Default = Color3.fromRGB(157, 0, 255),
+
+    Callback = function(color)
+        print("Color:", color)
+    end,
+})
+
+Main:AddKeybind({
+    Title = "Example Keybind",
+    Flag = "ExampleKeybind",
+
+    Default = "G",
+
+    Callback = function()
+        print("Keybind pressed")
+    end,
+})
+
+Main:AddDivider()
+
+Main:AddLabel({
+    Title = "Example Label",
+    Desc = "This is an example label.",
+})
+
+Main:AddParagraph({
+    Title = "Example Paragraph",
+    Desc = "This is an example paragraph.",
+})
+
+-- Visuals Tab
+local Visuals = library:AddTab({
+    Title = "Visuals",
+    Icon = "eye",
+})
+
+Visuals:AddSection({
+    Title = "Visual Settings",
+})
+
+Visuals:AddToggle({
+    Title = "Example Visual",
+    Flag = "ExampleVisual",
+    Default = false,
+
+    Callback = function(value)
+        print("Visual:", value)
+    end,
+})
+
+Visuals:AddColorPicker({
+    Title = "Visual Color",
+    Flag = "VisualColor",
+
+    Default = Color3.fromRGB(157, 0, 255),
+
+    Callback = function(color)
+        print("Visual Color:", color)
+    end,
+})
+
+-- Utility Tab
+local Utility = library:AddTab({
+    Title = "Utility",
+    Icon = "wrench",
+})
+
+Utility:AddSection({
+    Title = "Utilities",
+})
+
+Utility:AddButton({
+    Title = "Test Notification",
+    Icon = "bell",
+
+    Callback = function()
+        library:Notify({
+            Title = "PICKA'S HUB",
+            Content = "Test notification.",
+            Icon = "bell",
+            Duration = 3,
+        })
+    end,
+})
+
+Utility:AddButton({
+    Title = "Join Community",
+    Icon = "discord",
+
+    Callback = function()
+        library:JoinCommunity()
+    end,
+})
