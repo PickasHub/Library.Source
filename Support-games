@@ -13,7 +13,7 @@ return {
     Keyless = {
 
         [76503495566299] = "https://cdn.luaprotect.dev/u/a2ee68/NclxO8ewnJ79FBNv",
-        [1122334455] = "KEYLESS_RAW_LINK_2",
+        [1122334455] = "https://raw.githubusercontent.com/PickasHub/LoaderV2/refs/heads/main/Steal%25a%25chickenV1",
         [5566778899] = "KEYLESS_RAW_LINK_3",
 
     },
