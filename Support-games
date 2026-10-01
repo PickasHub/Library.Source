@@ -1,0 +1,27 @@
+----- Supported Games
+
+return {
+
+    ----- Keysystem
+    Keysystem = {
+
+        ----- Games
+        [17625359962] = "Rivals",
+        [1234567890] = "Example Game",
+
+        ----- One Keysystem Script
+        Script = "https://YOUR-LINK-HERE/main.lua",
+    },
+
+    ----- Keyless
+    Keyless = {
+
+        ----- Games
+        [76503495566299] = "Steal A Chicken",
+        [9876543210] = "Example Keyless Game",
+
+        ----- One Keyless Script
+        Script = "https://YOUR-LINK-HERE/keyless.lua",
+    },
+
+}
