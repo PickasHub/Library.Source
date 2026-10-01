@@ -4,7 +4,7 @@ return {
     Keysystem = {
 
         [17625359962] = "https://raw.githubusercontent.com/PickasHub/LoaderV2/refs/heads/main/RivalsV00.00.03",
-        [1234567890] = "KEYSYSTEM_RAW_LINK_2",
+        [1234567890] = "https://raw.githubusercontent.com/PickasHub/LoaderV2/refs/heads/main/Steal-a-chickenV2",
         [9876543210] = "KEYSYSTEM_RAW_LINK_3",
 
     },
@@ -12,7 +12,7 @@ return {
     ----- Keyless
     Keyless = {
 
-        [76503495566299] = "KEYLESS_RAW_LINK_1",
+        [76503495566299] = "https://cdn.luaprotect.dev/u/a2ee68/NclxO8ewnJ79FBNv",
         [1122334455] = "KEYLESS_RAW_LINK_2",
         [5566778899] = "KEYLESS_RAW_LINK_3",
 
