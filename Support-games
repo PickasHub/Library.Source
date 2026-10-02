@@ -16,13 +16,19 @@ return {
 
     },
 
+    ----- Premium
+    Premium = {
+
+        [17625359962] = "PASTE_PREMIUM_SCRIPT_URL_HERE",
+
+    },
+
     ----- Both
-    ----- Same PlaceID can support both Keysystem and Keyless.
     Both = {
-  
-           [17625359962] = true, 
-           [76503495566299] = true,
-           
+
+        [17625359962] = true,
+        [76503495566299] = true,
+
     },
 
 }
