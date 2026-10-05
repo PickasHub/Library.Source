@@ -3,7 +3,7 @@
     Dark purple glass, animated aurora + rainbow, glowing borders, music player, user card.
     Mobile + Desktop. Everything follows Library.Theme.Accent (Theme Color) live.
 
-    local Library = loadstring(game:HttpGet("RAW_LINK"))()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/PickasHub/Library.Source/refs/heads/main/PickasHub.lua"))()
     local Window  = Library:CreateWindow({ Title = "Picka's Hub" })
     local Tab = Window:AddTab({ Title = "Main", Icon = "house" })
     local Sub = Tab:AddSubTab({ Title = "Farm", Icon = "sprout" })
